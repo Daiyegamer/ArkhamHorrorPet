@@ -1,0 +1,298 @@
+/* Hover effect for all buttons */
+button:hover {
+    background-color: rgba(7, 7, 255, 0.382);
+    /* Change background color on hover */
+    color: white;
+    /* Change text color */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transform: scale(1.1);
+    /* Slightly increase size for emphasis */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+
+/* Hover effect for links with specific id */
+#link:hover {
+    color: lime;
+    text-shadow: 0 0 10px lime;
+    /* Add glowing effect */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional: centers text vertically if needed */
+    color: white;
+    /* Sets text color */
+    font-weight: bold;
+    /* Makes text bold */
+    text-shadow:
+        -1px -1px 0 black,
+        /* Top-left */
+        1px -1px 0 black,
+        /* Top-right */
+        -1px 1px 0 black,
+        /* Bottom-left */
+        1px 1px 0 black;
+    /* Bottom-right */
+
+}
+
+body {
+    margin: 0;
+    /* Removes default margin */
+    padding: 0;
+    /* Removes default padding */
+    background-image: url("ArkhamHorrorBackground.png");
+    background-size: cover;
+    /* Ensures the image covers the entire viewport */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    height: 100vh;
+    /* Ensures the body spans the full height of the viewport */
+    width: 100vw;
+    /* Ensures the body spans the full width of the viewport */
+
+}
+
+h2 {
+    display: flex;
+    font-weight: bold;
+    /* Makes text bold */
+    justify-content: center;
+    text-shadow:
+        -1px -1px 0 rgb(255, 255, 255),
+        /* Top-left */
+        1px -1px 0 rgb(255, 255, 255),
+        /* Top-right */
+        -1px 1px 0 rgb(255, 255, 255),
+        /* Bottom-left */
+        1px 1px 0 rgb(255, 255, 255);
+    /* Bottom-right */
+    align-items: center;
+
+}
+
+h4 {
+    font-weight: bold;
+    font-size: larger;
+    background-color: rgb(0, 4, 255);
+    color: white;
+
+}
+
+#Disclaimer {
+    background-color: azure;
+    text-align: center;
+
+}
+
+#startbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progressdetails1,
+#progressdetails2 {
+    position: absolute;
+    margin: top 200px;
+    ;
+    width: 135px;
+    z-index: 5;
+    background-color: azure;
+}
+
+
+#phase1,
+#phase2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(196, 76, 76);
+    font-size: x-large;
+    font-weight: bolder;
+    height: 75px;
+    /*display: none;*/
+    margin-top: 10px;
+    align-content: center;
+    flex-direction: column;
+}
+
+#step1,
+#step2,
+#step3,
+#step4,
+#stepA1C,
+#stepO1B,
+#stepO1C {
+    display: flex;
+    flex-direction: column;
+    /* Ensures content inside stacks vertically */
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(169, 159, 159);
+    font-size: large;
+    font-weight: bolder;
+    height: 90px;
+    width: 300px;
+    margin: 10px auto;
+    /* Centers the element horizontally */
+    align-items: center;
+}
+
+#p1color {
+    color: blue;
+    font-weight: bolder;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+    /* Adds padding to the footer */
+    margin-top: 600px;
+
+}
+
+#phase2q1,
+#stepO1A,
+#stepA1A,
+#stepA1B {
+    display: flex;
+    flex-direction: column;
+    /* Ensures content inside stacks vertically */
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(169, 159, 159);
+    font-size: large;
+    font-weight: bolder;
+    height: 90px;
+    width: 300px;
+    margin: 10px auto;
+    /* Centers the element horizontally */
+    align-items: center;
+
+}
+
+#officialrulebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight: bolder;
+
+
+}
+
+#link {
+    color: aqua;
+    text-shadow: 2px 2px 2px rgb(95, 100, 255);
+}
+
+#phase1:hover,
+#phase2:hover {
+    background-color: rgb(201, 54, 54);
+    /* Slightly darker shade */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transform: translatez(-10px);
+    /* Add a slight lift effect */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect for #step1 #step2  #phase2q1 #stepA1C #stepA1A #stepO1A */
+#step1:hover,
+#step2:hover,
+#step3:hover,
+#step4:hover,
+#phase2q1:hover,
+#stepA1C:hover,
+#stepA1A:hover,
+#stepO1A:hover,
+#stepO1B:hover {
+    background-color: rgb(137, 124, 124);
+    /* Change to a lighter shade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Add shadow */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.sr-only {
+    display: none;    
+
+}
+audio {
+    width: 200px;
+    height: 20px; /* Adjust the height */
+    border: 2px solid #333; /* Add a border around the audio player */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px; /* Margin for spacing */
+    background-color: #020483; /* Background color */
+}
+@media (max-width: 600px) {
+    /* Stack the progress details forms vertically */
+    #progressdetails1, 
+    #progressdetails2 {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        background-color: azure;
+    }
+
+    /* Ensure the tutorial section stays below the form */
+    #tutorial {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    /* Make the phase sections take full width and center the text */
+    #phase1,
+    #phase2 {
+        width: 100%;
+        font-size: larger;
+        text-align: center;
+    }
+
+    /* Adjust the step section width and alignment for small screens */
+    #step1, 
+    #step2, 
+    #step3, 
+    #step4, 
+    #stepA1C, 
+    #stepO1B, 
+    #stepO1C {
+        width: 90%;
+        font-size: medium;
+        margin: 5px auto;
+    }
+
+    /* Adjust header and buttons for smaller screens */
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    /* Make buttons larger for better touchability */
+    button {
+        font-size: 1.2em;
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Style for audio player */
+    audio {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

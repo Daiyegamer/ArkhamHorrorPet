@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arkham-Horror-Trainer</title>
+    <script src="ArkhamHorror.js"></script>
+    <link href="ArkhamHorror.css" rel="stylesheet" type="text/css" />
+    <!-- https://www.w3schools.com/html/html5_audio.asp   this is where I learned how to add audio -->
+    <audio id="music" controls>
+        <source id="AHM" src="TalesofDarkness.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+</head>
+
+<body>
+    <!-- Skip Navigation Link for Screen Readers -->
+    <!-- This link allows screen reader users to skip straight to the main content of the page -->
+    <a href="#main-content" class="sr-only">Skip to content</a>
+
+    <header>
+        <!-- Main heading of the page -->
+        <h1 id="main-heading">Arkham Horror Trainer</h1>
+    </header>
+
+    <!-- Disclaimer Section -->
+    <div id="Disclaimer" role="document">
+        <p>DISCLAIMER: I did not create the game nor do I own the rights to it. All rights to this game belong to
+            Fantasy Flight Games.
+            This is a fan-created webpage to assist people with playing the game for the first time.</p>
+        <p>
+            Use the provided rulebook that came with your copy of the game to set it up. Then click the Start button.
+            Click to continue and follow along.
+        </p>
+    </div>
+
+    <!-- Link to the official rulebook -->
+    <div id="officialrulebook">
+        <a id="link"
+            href="https://images-cdn.fantasyflightgames.com/filer_public/e8/17/e817095d-ac80-482b-867b-41b2e41a57f1/arkham_horror_core_rulebook.pdf"
+            target="_blank" aria-label="Complete Rulebook PDF">
+            Here is a link to the Complete Rulebook
+        </a>
+    </div>
+
+    <!-- Button box to start the game -->
+    <div id="buttonbox" role="region" aria-labelledby="main-heading">
+        <h2>Ready to Begin?</h2>
+        <div id="startbutton">
+            <!-- Start button to begin the game -->
+            <button type="button" aria-label="Start the Arkham Horror game">Start</button>
+        </div>
+    </div>
+
+    <!-- Main content section where the gameplay steps are outlined -->
+    <section id="gameplaysteps" role="region" aria-labelledby="main-heading">
+        <!-- First progress tracker form (Phase 1) -->
+        <form id="progressdetails1" action="/action_page.php">
+            <h4>Progress Tracker:</h4>
+            <section id="phase1track">
+                <!-- Phase 1 status -->
+                <p id="p1color">Phase 1 status</p>
+
+                <!-- Radio buttons to select Phase 1 status -->
+                <input type="radio" id="begin" name="phase1stat" value="phase1stat" aria-labelledby="begin-label">
+                <label for="begin" id="begin-label">Beginning</label><br>
+
+                <input type="radio" id="middle" name="phase1stat" value="phase1stat" aria-labelledby="middle-label">
+                <label for="middle" id="middle-label">Middle</label><br>
+
+                <input type="radio" id="end" name="phase1stat" value="phase1stat" aria-labelledby="end-label">
+                <label for="end" id="end-label">End</label>
+            </section>
+        </form>
+
+        <!-- Second progress tracker form (Phase 2) -->
+        <form id="progressdetails2" action="/action_page.php">
+            <h4>Progress Tracker:</h4>
+            <section id="phase2track">
+                <!-- Phase 2 status -->
+                <p>Phase 2 status</p>
+                <input type="radio" id="begin1" name="phase2stat" value="phase2stat" aria-labelledby="begin1-label">
+                <label for="begin1" id="begin1-label">Beginning</label><br>
+
+                <input type="radio" id="middle1" name="phase2stat" value="phase2stat" aria-labelledby="middle1-label">
+                <label for="middle1" id="middle1-label">Middle</label><br>
+
+                <input type="radio" id="end1" name="phase2stat" value="phase2stat" aria-labelledby="end1-label">
+                <label for="end1" id="end1-label">End</label>
+            </section>
+        </form>
+
+        <!-- Tutorial Steps for Phase 1 and Phase 2 -->
+        <section id="tutorial" role="region" aria-labelledby="main-heading">
+            <!-- Phase 1 Heading -->
+            <div id="phase1" aria-live="polite">PHASE I- UPKEEP</div>
+
+            <!-- Step 1: Refresh Exhausted Cards -->
+            <div id="step1">
+                <div>REFRESH EXHAUSTED CARDS</div>
+                <button type="button" aria-label="Continue to next step">Click here to continue</button>
+            </div>
+
+            <!-- Step 2: Perform Upkeep Actions -->
+            <div id="step2">
+                <div>PERFORM UPKEEP ACTIONS</div>
+                <button type="button" aria-label="Continue to next step">Click here to continue</button>
+            </div>
+
+            <!-- Step 3: Adjust Skills -->
+            <div id="step3">
+                <div>ADJUST SKILLS</div>
+                <button type="button" aria-label="Continue to next step">Click here to continue</button>
+            </div>
+
+            <!-- Step 4: Ready to move on -->
+            <div id="step4">
+                <div>READY TO MOVE ON?</div>
+                <button type="button" aria-label="Continue to next step">Click here to continue</button>
+            </div>
+
+            <!-- Phase 2 Heading -->
+            <div id="phase2">
+                PHASE II- MOVEMENT
+            </div>
+
+            <!-- Phase 2 Question 1: Are you in Arkham or Otherworlds? -->
+            <div id="phase2q1" aria-live="polite">
+                <div>ARE YOU IN ARKHAM OR OTHERWORLDS?</div>
+                <button type="button" id="arkham" aria-label="Select Arkham">Arkham</button>
+                <button type="button" id="otherworlds" aria-label="Select Otherworlds">Otherworlds</button>
+            </div>
+
+            <!-- Step for Otherworlds -->
+            <div id="stepO1A" aria-live="polite">
+                <div>OTHERWORLDS</div>
+                <button type="button" id="right" aria-label="Move Right">Right</button>
+                <button type="button" id="left" aria-label="Move Left">Left</button>
+            </div>
+
+            <!-- Step for moving to Arkham -->
+            <div id="stepO1B">
+                <div>Move to Arkham</div>
+                <button type="button" aria-label="Continue to next step">Click here to continue</button>
+            </div>
+
+            <!-- Step for moving to Right -->
+            <div id="stepO1C">
+                <div>Move to Right</div>
+                <button type="button" aria-label="Continue to next step">Click here to continue</button>
+            </div>
+
+            <!-- Step for deciding if there is a monster -->
+            <div id="stepA1A">
+                <div>Is there a Monster?</div>
+                <button type="button" id="yes" aria-label="Select Yes">Yes</button>
+                <button type="button" id="no" aria-label="Select No">No</button>
+            </div>
+
+            <!-- Step for making a choice between Fight and Evade -->
+            <div id="stepA1B">
+                <div>Make a Choice</div>
+                <button type="button" id="fight" aria-label="Choose Fight">Fight</button>
+                <button type="button" id="evade" aria-label="Choose Evade">Evade</button>
+            </div>
+
+            <!-- Final Step: Move to next phase and Replay -->
+            <div id="stepA1C">
+                <div>Move to Next Phase </div>
+                <div>(Next steps coming soon. Stay tuned for updates..)</div>
+                <button type="button" aria-label="Replay the game">Replay from the Beginning???</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024, All rights reserved. Arkham Horror Trainer</p>
+    </footer>
+
+</body>
+
+</html>
